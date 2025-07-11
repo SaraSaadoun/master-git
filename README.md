@@ -67,3 +67,17 @@ git checkout feat1 # goto
 
 git checkout -b feat1 # create + goto
 ```
+
+## Merging branch
+- locally 
+```
+git checkout main
+git merge feat1
+git branch -d feat1 # delete it
+```
+
+- delete branch note:
+```
+git branch -d feat1 # will work only if the branch is merged
+git branch -D feat1 # will delete the branch whether it has already been deleted or not.
+```
