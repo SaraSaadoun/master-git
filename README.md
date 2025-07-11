@@ -182,3 +182,11 @@ Moves HEAD to the specified commit.
 Keeps changes in the staging area (index).
 
 Your files still look like they were committed — just uncommitted now.
+
+
+# Tag
+```
+git tag v1.0 # create tag
+git tag # show
+git push origin main v1.0 # push it (lightweight tag "get its msg from commit msg")
+```
