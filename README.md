@@ -81,3 +81,30 @@ git branch -d feat1 # delete it
 git branch -d feat1 # will work only if the branch is merged
 git branch -D feat1 # will delete the branch whether it has already been deleted or not.
 ```
+
+- push branch
+```
+git checkout feat1
+git push origin feat1 # creates and push to remote feat1 branch 
+```
+
+# Stash
+- stash
+```
+git stash # to save your work for later when you're not ready to commit yet.
+```
+
+- list
+```
+git stash list
+```
+
+- pop
+```
+git stash pop
+```
+ if you got error msg due to some modification in one of the stashed file, you can restore it first (but you will lose the current modifications) using `git restore filename`
+- apply
+```
+git stash apply
+```
