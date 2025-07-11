@@ -149,7 +149,36 @@ git stash clear
 ```
 
 # commit
-you can go to a specific previous commit 
+you can go to a specific previous commit using:
 ```
 git reset --hard commit_hash 
 ```
+but note that other newer commits will still be there.
+Then, update the main repo:
+```
+git push origin main --force
+```
+Now the remote repo is updated and all following commits will be deleted there
+
+
+
+Notes:
+
+1. --hard
+```
+git reset --hard <commit-hash>
+```
+Moves HEAD to the specified commit.
+
+Deletes all changes in the staging area and working directory.
+
+2. --soft
+
+```
+git reset --soft <commit-hash>
+```
+Moves HEAD to the specified commit.
+
+Keeps changes in the staging area (index).
+
+Your files still look like they were committed — just uncommitted now.
