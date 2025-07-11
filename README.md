@@ -101,10 +101,10 @@ git stash list
 
 - pop
 ```
-git stash pop
+git stash pop # Applies the most recent stash and removes it from the stash list.
 ```
  if you got error msg due to some modification in one of the stashed file, you can restore it first (but you will lose the current modifications) using `git restore filename`
 - apply
 ```
-git stash apply
+git stash apply # Applies the most recent stash but keeps it in the stash list.
 ```
