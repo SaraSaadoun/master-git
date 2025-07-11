@@ -229,3 +229,5 @@ my questions:
 - commits after tag
 
 
+todo:
+- learn how master resolving conflicts
