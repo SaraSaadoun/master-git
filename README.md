@@ -212,7 +212,13 @@ git push origin --delete v2.0
 ```
 git checkout main
 git merge feature
-
 ```
+2. squash
+```
+git checkout main
+git merge --squash feature
+git commit -m "Add full feature in one commit"
+```
+
 my questions:
 - commits after tag
