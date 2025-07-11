@@ -219,6 +219,11 @@ git checkout main
 git merge --squash feature
 git commit -m "Add full feature in one commit"
 ```
+3. rebase
+```
+git checkout main
+git rebase feature
+```
 
 my questions:
 - commits after tag
