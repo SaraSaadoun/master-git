@@ -92,8 +92,9 @@ git push origin feat1 # creates and push to remote feat1 branch
 - stash
 ```
 git stash # to save your work for later when you're not ready to commit yet.
-```
 
+git stash save "File1 and File2" # add stash name
+```
 - list
 ```
 git stash list
@@ -104,7 +105,21 @@ git stash list
 git stash pop # Applies the most recent stash and removes it from the stash list.
 ```
  if you got error msg due to some modification in one of the stashed file, you can restore it first (but you will lose the current modifications) using `git restore filename`
+
+ ```
+ git stash 
 - apply
 ```
 git stash apply # Applies the most recent stash but keeps it in the stash list.
 ```
+
+
+Note that pop and apply -> get the latest stash 
+
+So, if you need a specific one, you can get it by id
+
+```
+git stash pop stash@{2}
+```
+
+
