@@ -207,7 +207,23 @@ delete the one in the remote repo
 ```
 git push origin --delete v2.0
 ```
-
+# Merge VS Squash VS Rebase
+1. merge
+```
+git checkout main
+git merge feature
+```
+2. squash
+```
+git checkout main
+git merge --squash feature
+git commit -m "Add full feature in one commit"
+```
+3. rebase
+```
+git checkout main
+git rebase feature
+```
 
 my questions:
 - commits after tag
