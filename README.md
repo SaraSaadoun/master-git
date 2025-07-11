@@ -195,3 +195,17 @@ adjust the msg of the tag yourself
 ```
 git tag -a v2.0 -m "second version"
 ```
+```
+git tag -l "v1.*" # get all tags of this pattern
+```
+- delete tag
+locally
+```
+ git tag -d v2.0
+```
+delete the one in the remote repo
+```
+git push origin --delete v2.0
+```
+my questions:
+- commits after tag
