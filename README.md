@@ -207,5 +207,12 @@ delete the one in the remote repo
 ```
 git push origin --delete v2.0
 ```
+# Merge VS Squash VS Rebase
+1. merge
+```
+git checkout main
+git merge feature
+
+```
 my questions:
 - commits after tag
