@@ -189,4 +189,9 @@ Your files still look like they were committed — just uncommitted now.
 git tag v1.0 # create tag
 git tag # show
 git push origin main v1.0 # push it (lightweight tag "get its msg from commit msg")
+
+```
+adjust the msg of the tag yourself
+```
+git tag -a v2.0 -m "second version"
 ```
