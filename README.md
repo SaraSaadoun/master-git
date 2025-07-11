@@ -14,6 +14,14 @@ git add . # add all
 
 ```
 git reset head file.py 
+# or
+git restore --staged file.py
+```
+
+- clean unstaged files
+```
+git clean -n # show files that will be deleted
+git clean -f # remove them
 ```
 
 # Remote
@@ -80,4 +88,68 @@ git branch -d feat1 # delete it
 ```
 git branch -d feat1 # will work only if the branch is merged
 git branch -D feat1 # will delete the branch whether it has already been deleted or not.
+```
+
+- push branch
+```
+git checkout feat1
+git push origin feat1 # creates and push to remote feat1 branch 
+```
+
+# Stash
+- stash
+```
+git stash # to save your work for later when you're not ready to commit yet.
+
+git stash save "File1 and File2" # add stash name
+```
+- list
+```
+git stash list
+```
+
+- pop
+
+git stash pop # Applies the most recent stash and removes it from the stash list.
+```
+ if you got error msg due to some modification in one of the stashed file, you can restore it first (but you will lose the current modifications) using `git restore filename`
+
+```
+ git stash 
+- apply
+```
+git stash apply # Applies the most recent stash but keeps it in the stash list.
+```
+
+
+Note that pop and apply -> get the latest stash 
+
+So, if you need a specific one, you can get it by id
+
+```
+git stash pop stash@{2}
+```
+
+
+- drop
+```
+git stash drop # rem the latest
+git stash drop stash@{1}
+```
+
+- show
+```
+git stash show stash@{1} # show content in stash
+```
+
+- clear
+clear all 
+```
+git stash clear
+```
+
+# commit
+you can go to a specific previous commit 
+```
+git reset --hard commit_hash 
 ```
