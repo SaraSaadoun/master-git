@@ -14,6 +14,14 @@ git add . # add all
 
 ```
 git reset head file.py 
+# or
+git restore --staged file.py
+```
+
+- clean unstaged files
+```
+git clean -n # show files that will be deleted
+git clean -f # remove them
 ```
 
 # Remote
@@ -138,4 +146,10 @@ git stash show stash@{1} # show content in stash
 clear all 
 ```
 git stash clear
+```
+
+# commit
+you can go to a specific previous commit 
+```
+git reset --hard commit_hash 
 ```
